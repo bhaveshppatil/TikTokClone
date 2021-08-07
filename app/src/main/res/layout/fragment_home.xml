@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.HomeFragment">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/searchLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/etQuery"-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:background="@drawable/et_shape"-->
+<!--            android:hint="Enter category"-->
+<!--            android:padding="15dp"-->
+<!--            android:textSize="15sp" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/searchQuery"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:src="@drawable/ic_baseline_search_24" />-->
+
+<!--    </LinearLayout>-->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

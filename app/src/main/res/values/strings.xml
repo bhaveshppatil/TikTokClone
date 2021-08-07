@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TikTokClone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="video1">https://vod-progressive.akamaized.net/exp=1628366116~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1946%2F19%2F484732151%2F2170751195.mp4~hmac=5dca02786a7a6cb18041855e3d5a50545457b0d60fc4026580badcde9fe85ef4/vimeo-prod-skyfire-std-us/01/1946/19/484732151/2170751195.mp4?filename=pexels-tima-miroshnichenko-6010489.mp4</string>
+</resources>
