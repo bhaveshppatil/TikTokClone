@@ -16,9 +16,10 @@ import retrofit2.Retrofit;
 public class MainActivity extends AppCompatActivity {
 
     private static final String FILE_NAME = "myFile";
-    private EditText etName, etPasswd;
+    private EditText etEmail, etPasswd;
     private Button btnLogin;
     private CheckBox checkBox;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private LinearLayout linearLayout;
 
     @Override
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        etName = findViewById(R.id.etName);
+        etEmail = findViewById(R.id.etName);
         etPasswd = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         checkBox = findViewById(R.id.RemCheckbox);
@@ -42,9 +43,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (checkBox.isChecked()) {
-                    String name = etName.getText().toString();
+                    String email = etEmail.getText().toString();
                     String passwd = etPasswd.getText().toString();
-                    saveLoginData(name, passwd);
+                    if (email.matches(emailPattern) && passwd.length() > 6){
+                        saveLoginData(email, passwd);
+                    }else {
+                        etEmail.setError("email or password invalid. Please check");
+                    }
                 }
             }
         });

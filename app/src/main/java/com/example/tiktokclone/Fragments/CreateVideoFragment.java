@@ -108,6 +108,13 @@ public class CreateVideoFragment extends Fragment {
         ivUploadVideo = view.findViewById(R.id.uploadVideo);
         videoView = view.findViewById(R.id.videoView);
         cardView = view.findViewById(R.id.cardSuccessView);
+        btnOK = view.findViewById(R.id.btnOk);
+        btnOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardView.setVisibility(View.GONE);
+            }
+        });
 
         ivCreateVideo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,13 +159,13 @@ public class CreateVideoFragment extends Fragment {
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 progressDialog.dismiss();
                 cardView.setVisibility(View.VISIBLE);
-                Toast.makeText(getActivity(), "Video upload success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Video upload success", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onFailure(Call<ResponseModel> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(getActivity(), "Video upload failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Video upload failed", Toast.LENGTH_LONG).show();
 
             }
         });

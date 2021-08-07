@@ -67,6 +67,15 @@
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/tickmark" />
 
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="10dp"
+            android:background="#7484BF"
+            android:text="Continue" />
+
     </androidx.cardview.widget.CardView>
 
 
