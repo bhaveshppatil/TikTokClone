@@ -2,7 +2,6 @@ package com.example.tiktokclone.json;
 
 import java.util.List;
 
-import com.example.tiktokclone.VideosModel;
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 

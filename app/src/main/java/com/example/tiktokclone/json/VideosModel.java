@@ -1,4 +1,4 @@
-package com.example.tiktokclone;
+package com.example.tiktokclone.json;
 
 import java.util.List;
 

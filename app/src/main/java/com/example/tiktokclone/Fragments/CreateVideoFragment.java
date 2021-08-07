@@ -108,18 +108,18 @@ public class CreateVideoFragment extends Fragment {
         ivUploadVideo = view.findViewById(R.id.uploadVideo);
         videoView = view.findViewById(R.id.videoView);
         cardView = view.findViewById(R.id.cardSuccessView);
-        btnOK = view.findViewById(R.id.btnOK);
+
         ivCreateVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ivOpenGallery.setVisibility(View.VISIBLE);
+                ivUploadVideo.setVisibility(View.VISIBLE);
             }
         });
 
         ivOpenGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ivUploadVideo.setVisibility(View.VISIBLE);
                 if (isPermissionGranted()) {
                     openGallery();
                 } else {
@@ -132,12 +132,6 @@ public class CreateVideoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 uploadVideoToApi();
-            }
-        });
-        btnOK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cardView.setVisibility(View.GONE);
             }
         });
     }
@@ -157,7 +151,7 @@ public class CreateVideoFragment extends Fragment {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 progressDialog.dismiss();
-//                cardView.setVisibility(View.VISIBLE);
+                cardView.setVisibility(View.VISIBLE);
                 Toast.makeText(getActivity(), "Video upload success", Toast.LENGTH_SHORT).show();
             }
 

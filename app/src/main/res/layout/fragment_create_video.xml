@@ -19,6 +19,7 @@
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="100dp"
+        android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="3">
 
@@ -27,13 +28,15 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/icons8_gallery_48" />
+            android:src="@drawable/icons8_gallery_48"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/ivCreateVideo"
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+
             android:src="@drawable/append" />
 
         <ImageView
@@ -41,7 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/icons8_upload_48" />
+            android:src="@drawable/icons8_upload_48"
+            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -50,7 +54,9 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
-        android:visibility="gone">
+        android:layout_margin="25dp"
+        android:visibility="gone"
+        app:cardCornerRadius="20dp">
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottieView"
@@ -60,18 +66,6 @@
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/tickmark" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:text="Video Upload success" />
-
-        <Button
-            android:id="@+id/btnOK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ok"/>
 
     </androidx.cardview.widget.CardView>
 

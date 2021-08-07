@@ -31,10 +31,10 @@ public class TikTokViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void setData(VideoModel videoModel) {
-        tvTitle.setText(videoModel.getTvTitle());
-        tvDesc.setText(videoModel.getTvDecs());
-        videoView.setVideoURI(videoModel.getVideoUrl());
+    public void setData(VideoDataModel videoDataModel) {
+        tvTitle.setText(videoDataModel.getTvTitle());
+        tvDesc.setText(videoDataModel.getTvDecs());
+        videoView.setVideoURI(videoDataModel.getVideoUrl());
 
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override

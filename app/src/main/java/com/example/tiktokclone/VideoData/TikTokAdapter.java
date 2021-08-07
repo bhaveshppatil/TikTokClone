@@ -13,10 +13,10 @@ import java.util.List;
 
 public class TikTokAdapter extends RecyclerView.Adapter<TikTokViewHolder> {
 
-    private List<VideoModel> videoModels;
+    private List<VideoDataModel> videoDataModels;
 
-    public TikTokAdapter(List<VideoModel> videoModels) {
-        this.videoModels = videoModels;
+    public TikTokAdapter(List<VideoDataModel> VideoDataModels) {
+        this.videoDataModels = VideoDataModels;
     }
 
     @NonNull
@@ -28,12 +28,12 @@ public class TikTokAdapter extends RecyclerView.Adapter<TikTokViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TikTokViewHolder holder, int position) {
-        VideoModel videoModel = videoModels.get(position);
-        holder.setData(videoModel);
+        VideoDataModel videoDataModel = videoDataModels.get(position);
+        holder.setData(videoDataModel);
     }
 
     @Override
     public int getItemCount() {
-        return videoModels.size();
+        return videoDataModels.size();
     }
 }

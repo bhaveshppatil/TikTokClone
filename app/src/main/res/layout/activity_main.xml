@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
         android:src="@drawable/tik_tok_logo_33093" />
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_below="@+id/tvLogin"
         android:layout_marginStart="30dp"
         android:fontFamily="monospace"
-        android:text="Welcome To Masai School"
+        android:text="Welcome TikTok Family School"
         android:textSize="17sp" />
 
 
@@ -45,7 +45,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/et_shape"
-        android:hint="Enter Name"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
         android:padding="15dp"
         android:textSize="15sp" />
 
